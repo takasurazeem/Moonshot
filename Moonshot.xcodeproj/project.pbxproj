@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		76362D4827D60E7A00CD8253 /* GeometryReaderPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76362D4727D60E7A00CD8253 /* GeometryReaderPractice.swift */; };
+		76362D4A27D614FC00CD8253 /* ScrollViewPractice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76362D4927D614FC00CD8253 /* ScrollViewPractice.swift */; };
 		76C4F3E627D524C100998486 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4F3E527D524C100998486 /* MoonshotApp.swift */; };
 		76C4F3E827D524C100998486 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C4F3E727D524C100998486 /* ContentView.swift */; };
 		76C4F3EA27D524C300998486 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C4F3E927D524C300998486 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		76362D4727D60E7A00CD8253 /* GeometryReaderPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderPractice.swift; sourceTree = "<group>"; };
+		76362D4927D614FC00CD8253 /* ScrollViewPractice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewPractice.swift; sourceTree = "<group>"; };
 		76C4F3E227D524C100998486 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C4F3E527D524C100998486 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		76C4F3E727D524C100998486 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				76362D4727D60E7A00CD8253 /* GeometryReaderPractice.swift */,
+				76362D4927D614FC00CD8253 /* ScrollViewPractice.swift */,
 			);
 			path = Learning;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76362D4A27D614FC00CD8253 /* ScrollViewPractice.swift in Sources */,
 				76C4F3E827D524C100998486 /* ContentView.swift in Sources */,
 				76C4F3E627D524C100998486 /* MoonshotApp.swift in Sources */,
 				76362D4827D60E7A00CD8253 /* GeometryReaderPractice.swift in Sources */,
