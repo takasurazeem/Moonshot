@@ -29,8 +29,8 @@ struct AstronautView: View {
 }
 
 struct AstronautView_Previews: PreviewProvider {
+    static let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     static var previews: some View {
-        let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
         AstronautView(astronaut: astronauts["aldrin"]!)
     }
 }
