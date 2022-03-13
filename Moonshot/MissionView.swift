@@ -7,12 +7,12 @@
 
 import SwiftUI
 
+struct CrewMember {
+    let role: String
+    let astronaut: Astronaut
+}
+
 struct MissionView: View {
-    
-    struct CrewMember {
-        let role: String
-        let astronaut: Astronaut
-    }
     
     let mission: Mission
     let crew: [CrewMember]
@@ -27,10 +27,7 @@ struct MissionView: View {
             }
         }
     }
-    var CustomDivider: some View = Rectangle()
-        .frame(height: 2)
-        .foregroundColor(.lightBackground)
-        .padding(.vertical)
+    
     var body: some View {
         GeometryReader { geometry in
             ScrollView {
@@ -47,42 +44,14 @@ struct MissionView: View {
                         Text("Crew")
                             .font(.title.bold())
                             .padding(.bottom, 5)
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(crew, id: \.role) { crewMember in
-                                    NavigationLink {
-                                        AstronautView(astronaut: crewMember.astronaut)
-                                    } label: {
-                                        HStack {
-                                            Image(crewMember.astronaut.id)
-                                                .resizable()
-                                                .frame(width: 104, height: 72)
-                                                .clipShape(Capsule())
-                                                .overlay(
-                                                    Capsule()
-                                                        .strokeBorder(.white, lineWidth: 1)
-                                                )
-                                            
-                                            VStack(alignment: .leading) {
-                                                Text(crewMember.astronaut.name)
-                                                    .foregroundColor(.white)
-                                                    .font(.headline)
-                                                Text(crewMember.role)
-                                                    .foregroundColor(.secondary)
-                                            }
-                                        }
-                                        .padding(.horizontal)
-                                    }
-                                }
-                            }
-                        }
+                        CrewMembersScrollView(crew: crew)
                         Text("Mission Highlights")
                             .font(.title.bold())
                             .padding(.bottom)
                         
-                        CustomDivider
+                        CustomDivider()
                         Text(mission.description)
-                        CustomDivider
+                        CustomDivider()
                     }
                     .padding(.horizontal)
                 }
