@@ -30,7 +30,7 @@ extension Mission {
     }
     
     var formattedLaunchDate: String {
-        launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
+        launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "Launch Date N/A"
     }
     
 }
