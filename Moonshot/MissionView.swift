@@ -21,7 +21,7 @@ struct MissionView: View {
         self.mission = mission
         self.crew = mission.crew.map { member in
             if let astronaut = astronauts[member.name] {
-                return CrewMember(role: astronaut.name, astronaut: astronaut)
+                return CrewMember(role: member.role, astronaut: astronaut)
             } else {
                 fatalError("Missing \(member.name)")
             }
