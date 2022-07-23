@@ -14,7 +14,7 @@ struct CrewMembersScrollView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(crew, id: \.role) { crewMember in
+                ForEach(crew, id: \.astronaut.id) { crewMember in
                     NavigationLink {
                         AstronautView(astronaut: crewMember.astronaut)
                     } label: {
@@ -27,6 +27,7 @@ struct CrewMembersScrollView: View {
                                     Capsule()
                                         .strokeBorder(.white, lineWidth: 1)
                                 )
+                                .accessibilityHidden(true)
                             
                             VStack(alignment: .leading) {
                                 Text(crewMember.astronaut.name)
