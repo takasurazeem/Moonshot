@@ -32,14 +32,17 @@ struct MissionView: View {
         GeometryReader { geometry in
             ScrollView {
                 VStack {
-                    Image(mission.image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: geometry.size.width * 0.6)
-                        .padding(.top)
-                    Text(mission.formattedLaunchDate)
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                    VStack {
+                        Image(mission.image)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: geometry.size.width * 0.6)
+                            .padding(.top)
+                        Text(mission.formattedLaunchDate)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                    .accessibilityHidden(true)
                     VStack(alignment: .leading) {
                         Text("Crew")
                             .font(.title.bold())

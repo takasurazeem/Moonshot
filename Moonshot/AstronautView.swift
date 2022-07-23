@@ -14,7 +14,7 @@ struct AstronautView: View {
     var body: some View {
         ScrollView {
             VStack {
-                Image(astronaut.id)
+                Image(decorative: astronaut.id)
                     .resizable()
                     .scaledToFit()
                 
@@ -32,5 +32,6 @@ struct AstronautView_Previews: PreviewProvider {
     static let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
     static var previews: some View {
         AstronautView(astronaut: astronauts["aldrin"]!)
+            .preferredColorScheme(.dark)
     }
 }
