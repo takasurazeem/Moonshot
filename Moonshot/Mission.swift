@@ -33,4 +33,10 @@ extension Mission {
         launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "Launch Date N/A"
     }
     
+    var accessibilityLabel: String {
+        let launchDate = launchDate?.formatted(date: .abbreviated, time: .omitted)
+        let label = "\(displayName), \(launchDate != nil ? "Launch Date: \(launchDate!)" : "Launch date not known")"
+//        print(label)
+        return label
+    }
 }

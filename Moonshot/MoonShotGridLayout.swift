@@ -47,6 +47,9 @@ struct MoonShotGridLayout: View {
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(.lightBackground)
                     )
+                    .accessibilityElement(children: .combine)
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityLabel(mission.accessibilityLabel)
                 }
             }
             .padding([.horizontal, .bottom])

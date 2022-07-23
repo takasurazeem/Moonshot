@@ -36,6 +36,9 @@ struct MoonShotListLayout: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     }
                 }
+                .accessibilityElement(children: .combine)
+                .accessibilityAddTraits(.isButton)
+                .accessibilityLabel(mission.accessibilityLabel)
             }
             .listRowBackground(Color.darkBackground)
         }
